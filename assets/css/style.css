@@ -1,0 +1,500 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+
+@font-face {
+  font-family: bahnschrift;
+  src: url(../font/bahnschrift-cufonfonts/BAHNSCHRIFT.TTF);
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+
+
+
+
+
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/* Banner Section Start */
+.banner {
+  height: 400px;
+  position: relative;
+  background-image: url('../images/background_Artboard.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner .form {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner h1 {
+  color: #fff;
+  font-family: bahnschrift;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.banner p {
+  margin-bottom: 60px;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: bahnschrift;
+}
+
+.search-district {
+  width: 80%;
+  height: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  border: 2px solid #47acf8;
+  border-radius: 25px;
+  display: block;
+}
+
+.search-district:focus { outline: 0; }
+
+.btn-search {
+  width: 30%;
+  padding: 10px;
+  margin: 20px auto;
+  border: 2px solid #47acf8;
+  border-radius: 25px;
+  display: block;
+  background-color: #47acf8;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: .5s ease;
+}
+
+.btn-search:focus { outline: none; }
+/* Banner Section End */
+
+/* Count Section Start */
+.count {
+  background-color: #444;
+  padding: 40px 0 100px;
+  position: relative;
+}
+
+.count h2 {
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: bahnschrift;
+}
+
+.count ul {
+  margin-top: 25px;
+  display: flex;
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.count span { 
+  margin: 10px 0;
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: bahnschrift;
+}
+
+.count span:nth-of-type(1) { font-size: 30px; }
+.count span:nth-of-type(2) {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.count::before, .count::after {
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  bottom: -3px;
+  background-color: #e6eff2;
+  content: '';
+}
+
+.count::before{
+  left: 0;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+} 
+
+.count::after {
+  right: 0;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.count figure {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+/* Count Section End */
+/* Result Section Start */
+.result {
+  padding: 50px 0;
+  background-color: #e6eff2;
+}
+
+.result ul {
+  display: flex;
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.result p {
+  color: #736a6a;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: bahnschrift;
+  font-weight: bold;
+}
+
+.result li {
+  box-shadow: 0px 0px 15px 2px #a7a3a3;
+  box-sizing: border-box;
+  flex-basis: 29%;
+  padding: 20px;
+  border: 2px solid #fff;
+  margin-bottom: 40px;
+  display: flex;
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  position: relative;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  background-color: #fafafa;
+}
+
+.result li::after, .result li::before {
+  position: absolute;
+  background-color: #1e4887;
+  content: '';
+}
+
+.result li::after{
+  width: 3px;
+  height: 45%;
+  bottom: -2px;
+  right: -5px;
+} 
+
+.result li::before {
+  height: 3px;
+  width: 40%;
+  bottom: -5px;
+  right: -5px;
+}
+
+.result span {
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  color: #736a6a;
+  font-size: 16px;
+}
+
+.result span:nth-child(odd) { flex-basis: 45%; }
+.result span:nth-child(even) {
+  flex-basis: 55%;
+  text-align: right; 
+}
+/* Result Section End */
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer {
+  padding: 40px 0;
+  background-color: #e6eff2;
+}
+
+footer h3 {
+  margin-bottom: 20px; 
+  color: #868686;
+  font-size: 19px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h3 a { 
+  color: #47acf8; 
+  transition: .5s ease;
+}
+
+footer ul {
+  display: flex;
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  justify-content: center;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+footer ul::after {
+  position: absolute;
+  background-color: #736a6a;
+  content: '';
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer li {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+footer span { 
+  margin-bottom: 10px;
+  display: block; 
+  color: #736a6a;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+footer li a {
+  color: #47acf8;
+  transition: .5s ease;
+}
+
+.btn-top { 
+  margin: 0 auto;
+  width: 20px;
+  position: fixed;
+  right: 25px;
+  bottom: 0;
+  display: none;
+  visibility: hidden;
+}
+
+.btn-top::before {
+  padding: 15px 25px 20px 11px;
+  border: 0.5px solid #1e4887;
+  display: block;
+  background-color: #47acf8;
+  color: #fff;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 15px;
+  text-align: center;
+  visibility: visible;
+  transition: .4s ease; 
+}
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+@media only screen and (min-width: 995px) {
+  
+  .btn-search:hover {
+    background-color: #fff;
+    color: #47acf8;
+  }
+
+  h3 a:hover { color: #1e4887; }
+
+  footer li a:hover { color: #1e4887; }
+
+  .btn-top:hover::before { 
+    background-color: #fafafa;
+    color: #47acf8;
+  }
+
+}
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+  
+
+
+}
+/*media query for 995px end here*/
+
+/*media query for 767px starts here*/
+@media only screen and (max-width: 767px) {
+
+  .banner .form { width: 95%; }
+
+  .count li { flex-basis: 45%; }
+
+  .result li { flex-basis: 95%; }
+
+  footer li { 
+    flex-basis: 90%; 
+    margin-bottom: 20px;
+  }
+
+  footer ul::after { width: 0; }
+
+}
+/*media query for 767px end here*/
+
+/*media query for 540 starts here*/
+@media only screen and (max-width: 540px) {
+
+
+
+}
+/*media query for 540px end here*/
+/*media query for 320px starts here*/
+@media only screen and (max-width: 300px) {
+  .banner h1 { font-size: 30px; }
+  .banner p { font-size: 16px; }
+  .search-district { width: 95%; }
+  .btn-search { width: 70%; }
+  .count { padding: 40px 0 30px; }
+  .count h2 { font-size: 30px; }
+  .count li { flex-basis: 80%; }
+  .count span:nth-of-type(1) { font-size: 20px; }
+  .count span:nth-of-type(2) { font-size: 40px; }
+
+}
+/*media query for 320px end here*/
+
